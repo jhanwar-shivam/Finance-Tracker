@@ -28,7 +28,7 @@ public class TransactionController {
     }
 
     @GetMapping("/{category}")
-    public List<Transaction> getTransactionsByCategory(@PathVariable String category) {
+    public List<TransactionDTO> getTransactionsByCategory(@PathVariable String category) {
         return transactionService.getTransactionsByCategory(category);
     }
 

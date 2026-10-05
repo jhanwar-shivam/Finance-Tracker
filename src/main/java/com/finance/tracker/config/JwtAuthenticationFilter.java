@@ -29,7 +29,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         try {
             processToken(request);
         } catch (Exception e) {
-            // throw new Exception(e.
         }
         filterChain.doFilter(request, response);
     }
@@ -39,7 +38,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             return;
         }
-        String jwtToken = authHeader.substring(7); // removing "Bearer "
+        String jwtToken = authHeader.substring(7);
         if (!jwtUtil.validateToken(jwtToken)) {
             return;
         }

@@ -19,7 +19,11 @@ import java.util.Optional;
 public interface TransactionDao extends JpaRepository<Transaction, Long> {
     List<Transaction> findAllByUser(User user);
 
+    List<Transaction> findAllByUserOrderByDateDesc(User user);
+
     List<Transaction> findAllByUserAndCategory(User user, String category);
+
+    Optional<Transaction> findByTransactionIdAndUser(Long transactionId, User user);
 
     @Query("SELECT sum(t.amount) FROM Transaction t WHERE t.user = :user AND t.transactionType = :type")
     Optional<BigDecimal> sumByUserAndType(@Param("user") User user, @Param("type") TransactionType type);

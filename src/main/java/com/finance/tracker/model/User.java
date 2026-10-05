@@ -18,13 +18,15 @@ public class User {
     private long userId;
 
     @NotBlank
+    @Column(name = "user_name", nullable = false)
     private String userName;
 
     @NotBlank
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String email;
 
     @NotBlank
+    @Column(nullable = false)
     private String password;
 
 }
