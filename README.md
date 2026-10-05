@@ -1,4 +1,4 @@
-# 💸 Personal Finance & Investment Tracker API
+# 💸 Personal Finance Tracker API
 
 A secure, scalable RESTful backend service built with **Spring Boot**, **Spring Security**, **JPA / Hibernate**, and **PostgreSQL** to manage personal finances, track multi-category transactions, and compute balance summaries with user-level data isolation and JWT-based authentication.
 
