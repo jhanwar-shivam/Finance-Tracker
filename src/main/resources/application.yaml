@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: tracker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/finance
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+jwt:
+  secret: "f1ecfe9021f661852ca5e8a6a01040fc9e4506863727627c510a2b6e3902a2b9"
+  expiration: 3600000 # in ms
